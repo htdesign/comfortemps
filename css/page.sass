@@ -1,0 +1,389 @@
+@import helper
+@import flexbox
+
+* 
+    box-sizing: border-box
+
+html, body
+    margin: 0
+
+html
+    font-family: $body-font
+    font-size: 16px
+    line-height: 1.5
+    color: #151515
+
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4 
+    font-family: $header-font
+    padding: 0
+    margin: 0
+    text-transform: uppercase
+
+.h1
+    font-size: 6em
+    line-height: 1em
+    letter-spacing: 4px
+    font-smooth: always
+
+a 
+    text-decoration: none
+    color: inherit
+
+.site 
+    max-width: 1160px
+    margin: auto
+
+.header
+    height: 560px
+    @include flexbox()
+
+    &__branding
+        @include flex(1)
+        position: relative
+        z-index: 2
+
+        .logo
+            display: block
+            width: 176px
+            height: 78px
+            background: url(../images/logo.jpg) no-repeat top left
+            margin: auto
+            margin-top: 30px
+
+        .copy
+            position: absolute
+            left: 80px
+            top: 160px
+
+            .h1
+                min-width: 760px
+                color: darken($blue,20%)
+                text-shadow: 3px 3px 0px rgba(255,255,255,0.5)
+
+            .subhead
+                display: block
+                font-size: 20px
+                line-height: 1.25
+                font-family: $header-font
+                text-transform: uppercase
+                letter-spacing: 3px
+                width: 190px
+                font-weight: 600
+
+    &__hero
+        @include flex(2)
+        background-size: cover
+        position: relative
+
+        &:before
+            content: ' '
+            display: block
+            position: absolute
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+            z-index: 1
+            opacity: 0.8
+            background-image: url(../images/hero_bg.jpg)
+            background-repeat: no-repeat
+            -ms-background-size: cover
+            -o-background-size: cover
+            -moz-background-size: cover
+            -webkit-background-size: cover
+            background-size: cover
+
+        .button
+            position: absolute
+            z-index: 2
+            width: 100%
+            bottom: 0
+
+.intro
+    @include flexbox()
+    margin-bottom: 80px
+
+    &__header
+        @include flex(1)
+
+        .wrap
+            padding: 60px
+            background: $blue
+
+            h4
+                color: #fff
+                font-weight: 500
+                letter-spacing: 2px
+                font-size: 1.5em
+                text-align: right
+
+    &__text
+        @include flex(2)
+
+        .wrap
+            padding: 60px 80px
+
+
+.packages
+    @include flexbox()
+    background: #ebebeb
+    padding: 80px 80px 40px 80px
+    position: relative
+    @include flex-direction(column)
+    margin-bottom: 160px
+
+    &:before
+        content: ' '
+        display: block
+        width: 128px
+        height: 128px
+        background: $light-blue
+        position: absolute
+        top: 110px
+        left: 120px
+        z-index: 1
+
+    &__copy
+        @include flex(1)
+        z-index: 2
+        padding: 80px
+
+        .packages__header
+            font-size: 3em
+            color: $blue
+            line-height: 1em
+            font-weight: 600
+            letter-spacing: 4px
+            margin-bottom: 32px
+
+    .package-list
+        @include flex(1)
+        @include flexbox()
+        @include justify-content(space-between)
+        @include flex-wrap(wrap)
+
+        .package
+            background: #fff
+            padding: 50px 40px
+            margin-bottom: 30px
+            border-top: 3px solid $light-blue
+            @include flex-basis(45%)
+            @include flex-basis(calc(50% - 15px))
+
+            &__name
+                text-align: center
+                font-size: 1.5em
+                margin-bottom: 30px
+
+            .unit__name
+                font-family: $header-font
+                font-weight: 500
+                text-align: center
+                color: lighten($dark-text,50%)
+                margin-top: 0px
+
+            .photo
+                width: 100%
+
+            .specs
+                @include flexbox()
+                border-top: 1px solid lighten($dark-text,80%)
+                border-bottom: 1px solid lighten($dark-text,80%)
+                padding-top: 16px    
+
+                .spec
+                    @include flex(1)
+
+                    .value
+                        font-family: $header-font
+                        font-size: 0.875em
+                        font-weight: 600
+                        color: $blue
+                        text-align: center
+                        margin-top: 24px
+
+                    .unit
+                        display: block
+                        font-weight: 500
+                        font-size: 0.7em
+                        text-transform: uppercase
+                        color: $light-text
+
+                .purifier
+                    background: url(../images/icon_purifier.png) no-repeat top center
+
+                .cooling
+                    background: url(../images/icon_cooling.png) no-repeat top center
+
+                .heating
+                    background: url(../images/icon_heating.png) no-repeat top center
+
+                .energy
+                    background: url(../images/icon_energy.png) no-repeat top center
+
+
+.services
+    padding: 80px
+    max-width: 980px
+    margin: auto
+    @include flexbox()
+    margin-bottom: 60px
+
+    .left
+        width: 300px
+        margin-right: 60px
+
+        .services__title
+            display: block
+            font-size: 7em
+            line-height: 0.8em
+            text-align: right
+            overflow-wrap: break-word
+            color: $blue
+
+
+    .right
+
+        .service
+            margin-bottom: 90px
+
+            &__title
+                font-size: 2em
+                font-weight: 800
+                display: block
+                width: 100%
+                height: 120px
+                padding-top: 96px
+                margin-bottom: 30px
+                display: inline-block
+
+                img 
+                    display: inline-block
+                    margin-right: 10px
+                    width: 24px;
+
+            .installation
+                background: url(../images/img_installation.jpg) no-repeat
+            .serv
+                background: url(../images/img_service.jpg) no-repeat
+            .maintenance
+                background: url(../images/img_maintenance.jpg) no-repeat
+
+
+.ducted
+    @include flexbox()
+    max-width: 920px
+    margin: auto
+    @include justify-content(space-between)
+    margin-bottom: 320px;
+
+    .video
+        @include flex(1)
+        @include flex-basis(45%)
+        @include flex-basis(calc(50% - 30px))
+
+    .title
+        @include flex(1)
+        order: 1
+        @include flex-basis(45%)
+        @include flex-basis(calc(50% - 30px))
+
+        h2
+            font-size: 5em
+            font-weight: 700
+            line-height: 0.8em
+            color: $blue
+            margin-bottom: 40px
+
+        .button
+            margin-top: 30px
+
+
+.contact
+    background: $blue
+    color: #fff
+
+    .wrap
+        max-width: 1160px
+        margin: auto
+        padding: 160px 0
+        @include flexbox()
+
+        .details
+            @include flex(1)
+            text-align: right
+
+            h2
+                font-weight: 500
+                font-size: 2em
+                line-height: 1em
+                margin-bottom: 60px
+
+                span
+                    display: block
+
+            p
+                display: inline-block
+                width: 50%
+                font-size: 14px
+                opacity: 0.5
+
+
+            ul
+                list-style: none
+                font-family: $header-font
+                font-weight: 400
+                text-transform: uppercase
+                line-height: 1
+
+        .form
+            @include flex(2)
+            padding-left: 60px
+
+            .map
+                margin-bottom: 60px
+
+                .address
+                    margin-top: 0
+                    font-size: 0.8em
+                    color: $light-blue
+
+            p
+                display: block
+                width: 70%
+
+            form
+                margin-top: 30px
+
+                input[type="text"]
+                    padding: 10px
+                    display: block
+                    width: 50%
+                    margin-bottom: 30px
+
+            .button
+                margin-top: 30px
+
+// MODULES
+
+.button
+    display: inline-block
+    font-family: $header-font
+    font-size: 1.25em
+    text-decoration: none
+    text-transform: uppercase
+    letter-spacing: 4px
+    text-align: center
+    color: #fff
+    background: $light-blue
+    padding: 12px 24px
+
+.line
+    display: block
+    width: 64px
+    height: 6px
+    border: none
+    background: #d8d8d8
+    margin-left: 0
+    margin-bottom: 32px

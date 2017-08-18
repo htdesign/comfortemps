@@ -1,0 +1,19 @@
+$header-font: 'Rajdhani', sans-serif
+$body-font: 'Open Sans', sans-serif
+$dark-text: #151515
+$light-text: #999999
+
+$blue: #234F8E
+$light-blue: #4DBEF0
+
+$tablet-width: 768px
+$desktop-width: 1024px
+
+@mixin tablet 
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) 
+    @content
+
+
+@mixin desktop 
+  @media (min-width: #{$desktop-width}) 
+    @content
