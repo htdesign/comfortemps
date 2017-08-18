@@ -536,8 +536,9 @@ a {
 .contact .wrap .form form input[type="text"] {
   padding: 10px;
   display: block;
-  width: 50%;
+  width: 68%;
   margin-bottom: 30px;
+  font-size: 16px;
 }
 
 .contact .wrap .form .button {
