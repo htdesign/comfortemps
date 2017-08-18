@@ -238,8 +238,8 @@ a {
 
 .packages .package-list .package {
   background: #fff;
-  padding: 50px 40px;
-  margin-bottom: 30px;
+  padding: 50px 40px 20px 40px;
+  margin-bottom: 60px;
   border-top: 3px solid #4DBEF0;
   -webkit-flex-basis: 45%;
   -moz-flex-basis: 45%;
@@ -319,6 +319,19 @@ a {
 
 .packages .package-list .package .specs .energy {
   background: url(../images/icon_energy.png) no-repeat top center;
+}
+
+.packages .package-list .package .price {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+  margin-top: 60px;
+  color: #fff;
+  background: #234F8E;
+  padding: 15px 0;
 }
 
 .services {
