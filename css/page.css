@@ -566,6 +566,13 @@ p {
 
 .ducted .video .youtube {
   width: 100%;
+  padding-right: 6em;
+}
+
+@media (max-width: 767px) {
+  .ducted .video .youtube {
+    padding-right: 0;
+  }
 }
 
 .ducted .title {
