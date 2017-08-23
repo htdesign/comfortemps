@@ -45,10 +45,16 @@ p
     margin: auto
     margin-top: 64px
 
+    @include mobile()
+        margin-top: 0
+
 .header
     // height: 560px
     @include flexbox()
     margin-bottom: 256px
+
+    @include mobile()
+        margin-bottom: 32px
 
     &__branding
         @include flex(1)
@@ -62,11 +68,18 @@ p
             img 
                 width: 420px
 
+                @include mobile()
+                    width: 280px
+                    margin-left: 32px
+
         .copy
             position: relative
             background: $blue
             padding: 64px
             padding-top: 320px
+
+            @include mobile
+                padding: 32px
 
             .h1
                 min-width: 760px
@@ -76,8 +89,17 @@ p
                 top: 64px
                 z-index: 2
 
+                @include mobile
+                    font-size: 4em
+                    position: relative
+                    min-width: auto
+                    top: 0
+
                 span
                     display: block
+                    
+                    @include mobile
+                        display: inline
 
             .subhead
                 display: block
@@ -101,15 +123,25 @@ p
             top: 0
             z-index: 1
 
+            @include mobile()
+                display: none
+
 .intro
     @include flexbox()
     margin-bottom: 80px
+
+    @include mobile()
+        @include flex-direction(column)
+        margin-bottom: 32px
 
     &__header
         @include flex(2)
 
         .wrap
             padding: 64px
+
+            @include mobile()
+                padding: 32px
 
             h4
                 color: $dark-text
@@ -118,11 +150,18 @@ p
                 font-size: 3em
                 text-align: right
 
+                @include mobile()
+                    font-size: 2em
+                    text-align: left
+
     &__text
         @include flex(2)
 
         .wrap
-            padding: 64px 76px
+            padding: 64px 80px
+
+            @include mobile()
+                padding: 32px
 
 
 .packages
@@ -131,6 +170,10 @@ p
     position: relative
     @include flex-direction(column)
     margin-bottom: 80px
+
+    @include mobile 
+        margin-bottom: 32px
+        padding: 32px
 
     &__copy
         @include flex(1)
@@ -147,8 +190,15 @@ p
             padding: 32px
             margin-bottom: 64px
 
+            @include mobile
+                font-size: 2em
+                margin-bottom: 32px
+
         p
             padding: 0 32px
+
+            @include mobile()
+                padding: 0
 
     .package-list
         @include flex(1)
@@ -156,6 +206,10 @@ p
         @include justify-content(space-between)
         @include flex-wrap(wrap)
         padding: 0 64px
+
+        @include mobile()
+            @include flex-direction(column)
+            padding: 0 32px
 
         .package
             position: relative
@@ -235,15 +289,21 @@ p
 
 .services
     padding: 80px
-    // max-width: 980px
     margin: auto
     @include flexbox()
     margin-bottom: 80px
+    @include flex-direction(column)
+
+    @include mobile()
+        padding: 32px
+        margin-bottom: 32px
 
     .left
         @include flex(1)
-        // width: 300px
         margin-right: 128px
+
+        @include mobile()
+            margin-right: 0
 
         .services__title
             display: block
@@ -253,7 +313,10 @@ p
             overflow-wrap: break-word
             color: $blue
 
-
+            @include mobile()
+                text-align: left
+                font-size: 3em
+                margin-bottom: 32px
     .right
         @include flex(1)
 
@@ -287,12 +350,22 @@ p
     margin-bottom: 20em;
     background: lighten($dark-text, 65%)
 
+    @include mobile()
+        @include flex-direction(column)
+        padding: 64px 32px
+        margin-bottom: 0
+
     .video
         @include flex(2)
 
+        .youtube
+            width: 100%
+
     .title
         @include flex(1)
-        order: 1
+
+        @include mobile()
+            text-align: center
 
         h2
             font-size: 4em
@@ -300,6 +373,9 @@ p
             color: $blue
             margin-bottom: 32px
             margin-top: 32px
+
+            @include mobile()
+                font-size: 1.5em
 
         .button
             margin-top: 30px
@@ -315,23 +391,42 @@ p
         padding: 160px 0
         @include flexbox()
 
+        @include mobile
+            @include flex-direction(column)
+            padding: 64px 32px;
+
         .details
             @include flex(1)
-            text-align: right
+
+            @include mobile
+                margin-bottom: 64px
+                text-align: center
 
             h2
                 font-size: 3em
                 line-height: 1
                 margin-bottom: 64px
 
+                @include mobile()
+                    margin-bottom: 32px
+
                 span
                     display: block
 
+                    @include mobile()
+                        display: inline
+
+            .map
+                margin-bottom: 60px
+
+                .address
+                    font-size: 16px
+                    text-align: center
+                    width: 100%
+
             p
                 display: inline-block
-                width: 70%
                 color: #fff
-                font-size: 16px
 
             ul
                 list-style: none
@@ -339,24 +434,20 @@ p
                 line-height: 1
                 font-size: 1.5em
                 font-weight: 700
+                display: inline-block
 
         .form
-            @include flex(2)
-            padding-left: 60px
+            @include flex(1)
+            padding-left: 128px
 
-            .map
-                margin-bottom: 60px
-
-                .address
-                    margin-top: 0
-                    font-size: 0.8em
-                    color: #fff
+            @include mobile()
+                padding: 0
+                text-align: center
 
             p
                 display: block
-                width: 70%
                 color: #fff
-                font-size: 16px
+                margin-bottom: 80px
 
             form
                 margin-top: 32px
@@ -364,7 +455,7 @@ p
                 input[type="text"]
                     padding: 16px
                     display: block
-                    width: 68%
+                    width: 100%
                     margin-bottom: 32px
                     font-size: 16px
 
