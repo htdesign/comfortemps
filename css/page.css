@@ -88,6 +88,7 @@ p {
 .header__branding .logo {
   display: block;
   margin: 32px auto;
+  margin-left: 64px;
 }
 
 .header__branding .logo img {
@@ -447,10 +448,15 @@ p {
   display: -webkit-flex;
   display: flex;
   margin-bottom: 80px;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+}
+
+@media (max-width: 767px) {
+  .services {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 767px) {
