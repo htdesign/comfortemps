@@ -4,8 +4,6 @@
 * 
     box-sizing: border-box
 
-   
-
 html, body
     margin: 0
 
@@ -13,8 +11,7 @@ html
     font-family: $body-font
     font-size: 16px
     line-height: 1.5
-    color: $dark-text
-    overflow-x: hidden
+    color: #151515
 
 h1, h2, h3, h4,
 .h1, .h2, .h3, .h4 
@@ -22,11 +19,10 @@ h1, h2, h3, h4,
     padding: 0
     margin: 0
     text-transform: uppercase
-    font-weight: normal
 
 .h1
     font-size: 6em
-    line-height: 1.25em
+    line-height: 1em
     letter-spacing: 4px
 
 a 
@@ -34,21 +30,15 @@ a
     color: inherit
 
 p
-    font-size: 1.5em
-    color: $light-text
-    font-weight: 400
-    margin-top: 0
-    margin-bottom: 1em
+    font-size: 1.125em
 
 .site 
     max-width: 1280px
     margin: auto
-    margin-top: 64px
 
 .header
-    // height: 560px
+    height: 560px
     @include flexbox()
-    margin-bottom: 256px
 
     &__branding
         @include flex(1)
@@ -57,129 +47,143 @@ p
 
         .logo
             display: block
-            margin: 32px auto
+            margin: auto
+            margin-top: 30px
 
             img 
-                width: 420px
+                width: 360px
 
         .copy
-            position: relative
-            background: $blue
-            padding: 64px
-            padding-top: 320px
+            position: absolute
+            left: 80px
+            top: 160px
 
             .h1
                 min-width: 760px
-                color: #fff
-                margin-bottom: 32px
-                position: absolute
-                top: 64px
-                z-index: 2
-
-                span
-                    display: block
+                color: darken($blue,20%)
+                text-shadow: 3px 3px 0px rgba(255,255,255,0.5)
 
             .subhead
                 display: block
-                font-size: 0.8em
+                font-size: 20px
                 line-height: 1.25
                 font-family: $header-font
                 text-transform: uppercase
-                letter-spacing: 4px
-                color: lighten($light-text, 30%)
-                transform: rotate(-90deg);
-                position: absolute
-                top: 208px
-                left: -144px
+                letter-spacing: 3px
+                width: 190px
+                font-weight: 600
 
-        .masthead 
+    &__hero
+        @include flex(2)
+        background-size: cover
+        position: relative
+
+        &:before
+            content: ' '
+            display: block
             position: absolute
-            height: 100%
-            width: 75%
-            right: 0
-            left: 25%
+            left: 0
             top: 0
+            width: 100%
+            height: 100%
             z-index: 1
+            opacity: 0.8
+            background-image: url(../images/hero_bg.jpg)
+            background-repeat: no-repeat
+            -ms-background-size: cover
+            -o-background-size: cover
+            -moz-background-size: cover
+            -webkit-background-size: cover
+            background-size: cover
+
+        .button
+            position: absolute
+            z-index: 2
+            width: 100%
+            bottom: 0
 
 .intro
     @include flexbox()
     margin-bottom: 80px
 
     &__header
-        @include flex(2)
+        @include flex(1)
 
         .wrap
-            padding: 64px
+            padding: 60px
+            background: $blue
 
             h4
-                color: $dark-text
+                color: #fff
                 font-weight: 500
                 letter-spacing: 2px
-                font-size: 3em
+                font-size: 1.5em
                 text-align: right
 
     &__text
         @include flex(2)
 
         .wrap
-            padding: 64px 76px
+            padding: 60px 80px
 
 
 .packages
     @include flexbox()
-    padding: 5em
+    background: #ebebeb
+    padding: 80px 80px 40px 80px
     position: relative
     @include flex-direction(column)
-    margin-bottom: 80px
+    margin-bottom: 160px
+
+    &:before
+        content: ' '
+        display: block
+        width: 128px
+        height: 128px
+        background: $light-blue
+        position: absolute
+        top: 110px
+        left: 120px
+        z-index: 1
 
     &__copy
         @include flex(1)
         z-index: 2
-        margin-bottom: 4em
+        padding: 80px
 
         .packages__header
-            font-size: 4em
-            color: #fff
-            text-align: center
-            line-height: 1.5
+            font-size: 3em
+            color: $blue
+            line-height: 1em
+            font-weight: 600
             letter-spacing: 4px
-            background: $blue
-            padding: 32px
-            margin-bottom: 64px
-
-        p
-            padding: 0 32px
+            margin-bottom: 32px
 
     .package-list
         @include flex(1)
         @include flexbox()
         @include justify-content(space-between)
         @include flex-wrap(wrap)
-        padding: 0 64px
 
         .package
-            position: relative
             background: #fff
-            padding: 2em
-            margin-bottom: 10em
-            border: 1px solid lighten($light-text, 50%)
+            padding: 50px 40px 20px 40px
+            margin-bottom: 60px
+            border-top: 3px solid $light-blue
             @include flex-basis(45%)
-            @include flex-basis(calc(50% - 1em))
+            @include flex-basis(calc(50% - 15px))
 
             &__name
-                font-size: 1em
-                font-family: $body-font
-                color: $light-text
                 text-align: center
-                margin-bottom: 2em
-                font-weight: 700
-                letter-spacing: 2px
-                border-bottom: 1px solid lighten($light-text, 50%)
-                padding-bottom: 32px
+                font-size: 1.5em
+                margin-bottom: 30px
 
             .unit__name
-                color: $light-text
-                margin-top: 0
+                font-family: $header-font
+                font-weight: 500
+                text-align: center
+                color: lighten($dark-text,50%)
+                margin-top: 0px
 
             .photo
                 width: 100%
@@ -188,24 +192,25 @@ p
                 @include flexbox()
                 border-top: 1px solid lighten($dark-text,80%)
                 border-bottom: 1px solid lighten($dark-text,80%)
-                padding-top: 1em    
+                padding-top: 16px    
 
                 .spec
                     @include flex(1)
 
                     .value
+                        font-family: $header-font
                         font-size: 0.875em
+                        font-weight: 600
                         color: $blue
                         text-align: center
                         margin-top: 24px
-                        font-weight: 700
 
                     .unit
-                        font-family: $header-font
                         display: block
-                        font-size: 0.8em
+                        font-weight: 500
+                        font-size: 0.7em
                         text-transform: uppercase
-                        color: lighten($light-text, 20%)
+                        color: $light-text
 
                 .purifier
                     background: url(../images/icon_purifier.png) no-repeat top center
@@ -224,82 +229,86 @@ p
                 text-align: center
                 text-transform: uppercase
                 font-family: $header-font
+                font-weight: 600
                 font-size: 1.5em
+                margin-top: 60px
                 color: #fff
-                background: $dark-text
-                padding: 8px 16px
-                position: absolute
-                bottom: -76px
-                left: 50%
-                transform: (translateX(-50%))
+                background: $blue
+                padding: 15px 0
+
 
 .services
     padding: 80px
-    // max-width: 980px
+    max-width: 980px
     margin: auto
     @include flexbox()
-    margin-bottom: 80px
+    margin-bottom: 60px
 
     .left
-        @include flex(1)
-        // width: 300px
-        margin-right: 128px
+        width: 300px
+        margin-right: 60px
 
         .services__title
             display: block
             font-size: 7em
-            line-height: 1em
+            line-height: 0.8em
             text-align: right
             overflow-wrap: break-word
             color: $blue
 
 
     .right
-        @include flex(1)
 
         .service
-            margin-bottom: 96px
+            margin-bottom: 90px
 
             &__title
                 font-size: 2em
+                font-weight: 800
                 display: block
                 width: 100%
-                height: 160px
-                margin-bottom: 80px
-                padding-top: 192px
+                height: 120px
+                padding-top: 96px
+                margin-bottom: 30px
+                display: inline-block
+
+                img 
+                    display: inline-block
+                    margin-right: 10px
+                    width: 24px;
 
             .installation
-                background: url(../images/service_installation.jpg) no-repeat center
-                background-size: cover
+                background: url(../images/img_installation.jpg) no-repeat
             .serv
-                background: url(../images/service_service.jpg) no-repeat center
-                background-size: cover
+                background: url(../images/img_service.jpg) no-repeat
             .maintenance
-                background: url(../images/service_maintenance.jpg) no-repeat center
-                background-size: cover
+                background: url(../images/img_maintenance.jpg) no-repeat
 
 
 .ducted
     @include flexbox()
-    padding: 80px
+    max-width: 920px
     margin: auto
     @include justify-content(space-between)
-    margin-bottom: 20em;
-    background: lighten($dark-text, 65%)
+    margin-bottom: 320px;
 
     .video
-        @include flex(2)
+        @include flex(1)
+        @include flex-basis(45%)
+        @include flex-basis(calc(50% - 30px))
 
     .title
         @include flex(1)
         order: 1
+        @include flex-basis(45%)
+        @include flex-basis(calc(50% - 30px))
 
         h2
-            font-size: 4em
-            line-height: 1em
+            font-size: 5em
+            font-weight: 700
+            line-height: 0.8em
             color: $blue
-            margin-bottom: 32px
-            margin-top: 32px
+            margin-bottom: 40px
 
         .button
             margin-top: 30px
@@ -320,25 +329,27 @@ p
             text-align: right
 
             h2
-                font-size: 3em
-                line-height: 1
-                margin-bottom: 64px
+                font-weight: 500
+                font-size: 2em
+                line-height: 1em
+                margin-bottom: 60px
 
                 span
                     display: block
 
             p
                 display: inline-block
-                width: 70%
-                color: #fff
-                font-size: 16px
+                width: 50%
+                font-size: 14px
+                opacity: 0.5
+
 
             ul
                 list-style: none
+                font-family: $header-font
+                font-weight: 400
                 text-transform: uppercase
                 line-height: 1
-                font-size: 1.5em
-                font-weight: 700
 
         .form
             @include flex(2)
@@ -350,22 +361,20 @@ p
                 .address
                     margin-top: 0
                     font-size: 0.8em
-                    color: #fff
+                    color: $light-blue
 
             p
                 display: block
                 width: 70%
-                color: #fff
-                font-size: 16px
 
             form
-                margin-top: 32px
+                margin-top: 30px
 
                 input[type="text"]
-                    padding: 16px
+                    padding: 10px
                     display: block
                     width: 68%
-                    margin-bottom: 32px
+                    margin-bottom: 30px
                     font-size: 16px
 
             .button
@@ -379,12 +388,11 @@ p
     font-size: 1.25em
     text-decoration: none
     text-transform: uppercase
-    letter-spacing: 2px
+    letter-spacing: 4px
     text-align: center
     color: #fff
-    background-image: linear-gradient(89deg, #FF8A30 0%, #DB2A22 100%);
-    box-shadow: 8px 8px 16px rgba(0,0,0,0.10)
-    padding: 18px 24px
+    background: $light-blue
+    padding: 12px 24px
     border: none
     outline: none
 
@@ -393,6 +401,6 @@ p
     width: 64px
     height: 6px
     border: none
-    background: #fff
+    background: #d8d8d8
     margin-left: 0
     margin-bottom: 32px
