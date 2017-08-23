@@ -69,12 +69,14 @@ p
             margin: 32px auto
             margin-left: 64px
 
+            @include mobile()
+                margin-left: 32px
+
             img 
                 width: 420px
 
                 @include mobile()
                     width: 280px
-                    margin-left: 32px
 
         .copy
             position: relative

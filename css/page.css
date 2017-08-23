@@ -97,6 +97,12 @@ p {
   margin-left: 64px;
 }
 
+@media (max-width: 767px) {
+  .header__branding .logo {
+    margin-left: 32px;
+  }
+}
+
 .header__branding .logo img {
   width: 420px;
 }
@@ -104,7 +110,6 @@ p {
 @media (max-width: 767px) {
   .header__branding .logo img {
     width: 280px;
-    margin-left: 32px;
   }
 }
 
