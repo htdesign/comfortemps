@@ -56,6 +56,9 @@ p
     @include mobile()
         margin-bottom: 32px
 
+    @include tablet()
+        margin-bottom: 128px
+
     &__branding
         @include flex(1)
         position: relative
@@ -135,6 +138,9 @@ p
         @include flex-direction(column)
         margin-bottom: 32px
 
+    @include tablet()
+        @include flex-direction(column)
+
     &__header
         @include flex(2)
 
@@ -143,6 +149,9 @@ p
 
             @include mobile()
                 padding: 32px
+
+            @incldue tablet()
+                padding: 32px 64px
 
             h4
                 color: $dark-text
@@ -155,6 +164,9 @@ p
                     font-size: 2em
                     text-align: left
 
+                @include tablet()
+                    text-align: left
+
     &__text
         @include flex(2)
 
@@ -163,6 +175,9 @@ p
 
             @include mobile()
                 padding: 32px
+
+            @include tablet()
+                padding: 32px 64px
 
 
 .packages
@@ -175,6 +190,9 @@ p
     @include mobile 
         margin-bottom: 32px
         padding: 32px
+
+    @include tablet()
+        padding: 64px
 
     &__copy
         @include flex(1)
@@ -191,9 +209,12 @@ p
             padding: 32px
             margin-bottom: 64px
 
-            @include mobile
+            @include mobile()
                 font-size: 2em
                 margin-bottom: 32px
+
+            @include tablet()
+                font-size: 3em
 
         p
             padding: 0 32px
@@ -211,6 +232,9 @@ p
         @include mobile()
             @include flex-direction(column)
             padding: 0 32px
+
+        @include tablet()
+            @include flex-direction(column)
 
         .package
             position: relative
@@ -296,10 +320,13 @@ p
 
     @include mobile()
         @include flex-direction(column)
-
-    @include mobile()
         padding: 32px
         margin-bottom: 32px
+
+    @include tablet()
+        @include flex-direction(column)
+        padding: 32px 64px
+
 
     .left
         @include flex(1)
@@ -320,6 +347,13 @@ p
                 text-align: left
                 font-size: 3em
                 margin-bottom: 32px
+
+            @include tablet()
+                font-size: 3em
+                text-align: left
+                margin-bottom: 32px
+
+
     .right
         @include flex(1)
 
@@ -358,6 +392,11 @@ p
         padding: 64px 32px
         margin-bottom: 0
 
+    @include tablet()
+        @include flex-direction(column)
+        margin-bottom: 0
+        text-align: center
+
     .video
         @include flex(2)
 
@@ -367,6 +406,10 @@ p
 
             @include mobile()
                 padding-right: 0
+
+            @include tablet()
+                padding-right: 0
+
     .title
         @include flex(1)
 
@@ -383,6 +426,9 @@ p
             @include mobile()
                 font-size: 1.5em
 
+            @include tablet()
+                font-size: 2em
+
         .button
             margin-top: 30px
 
@@ -397,14 +443,22 @@ p
         padding: 160px 0
         @include flexbox()
 
-        @include mobile
+        @include mobile()
             @include flex-direction(column)
             padding: 64px 32px;
+
+        @include tablet()
+            @include flex-direction(column)
+            padding: 64px 32px
 
         .details
             @include flex(1)
 
-            @include mobile
+            @include mobile()
+                margin-bottom: 64px
+                text-align: center
+
+            @include tablet()
                 margin-bottom: 64px
                 text-align: center
 
@@ -416,10 +470,16 @@ p
                 @include mobile()
                     margin-bottom: 32px
 
+                @include tablet()
+                    margin-bottom: 32px
+
                 span
                     display: block
 
                     @include mobile()
+                        display: inline
+
+                    @include tablet()
                         display: inline
 
             .map
@@ -440,13 +500,16 @@ p
                 line-height: 1
                 font-size: 1.5em
                 font-weight: 700
-                display: inline-block
 
         .form
             @include flex(1)
             padding-left: 128px
 
             @include mobile()
+                padding: 0
+                text-align: center
+
+            @include tablet()
                 padding: 0
                 text-align: center
 
