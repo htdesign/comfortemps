@@ -42,6 +42,10 @@
                 </div>
             </div>
         </section>
+        <section class="panasonic">
+            <img src="images/panasonic-logo.png">
+            <h3>Panasonic Dealer and Accredited Installer</h3>
+        </section>
         <section class="packages">
             <div class="packages__copy">
                 <h2 class="packages__header">Energy and Cost Efficient, practical home technology!</h2>
@@ -159,7 +163,6 @@
                     <h3 class="service__title maintenance">Maintenance</h3>
                     <p>We pride in what we do. This is why we partner only with the brand that we can trust. Comfortemps expertise in installation of Panasonic Heat Pump and Air Conditioning System provides you piece of mind. Our After Sales Support ensures Quality Service of every installation we do for our customers. What’s more, Panasonic Heat Pump is rightfully designed for Kiwi Homes focusing on efficiency, air purification, and most importantly, value for your money – definitely, the preferable heating system for your home.</p>
                 </div>
-
             </div>
         </section>
         <section class="ducted">
@@ -199,10 +202,10 @@
             <div class="form">
                 <p>We love to hear from you. Flick us your details below and will reach out within the next 48 hours.</p>
                 <form action="details.php" method="post">
-                    <input type="text" placeholder="Name" name="name">
-                    <input type="text" placeholder="Email Address" name="email">
-                    <input type="text" placeholder="Phone / Mobile" name="phone">
-                    <input type="submit" name="submit" value="submit" class="button">
+                    <input type="text" placeholder="Name" name="name" required>
+                    <input type="text" placeholder="Email Address" name="email" required>
+                    <input type="text" placeholder="Phone / Mobile" name="phone" required>
+                    <button type="submit" name="submit" class="button">submit</button>
                 </form>
             </div>
         </div>

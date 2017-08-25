@@ -281,6 +281,28 @@ p {
   }
 }
 
+.panasonic {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+@media (max-width: 767px) {
+  .panasonic {
+    width: 80%;
+  }
+}
+
+.panasonic img {
+  width: 100%;
+  border-bottom: 1px solid #c9c9c9;
+}
+
+.panasonic h3 {
+  color: #969696;
+}
+
 .packages {
   display: -webkit-box;
   display: -moz-box;
@@ -487,13 +509,13 @@ p {
   display: block;
   text-align: center;
   text-transform: uppercase;
-  font-family: "Norwester", sans-serif;
-  font-size: 1.5em;
+  font-size: 1em;
+  letter-spacing: 4px;
   color: #fff;
   background: #4a4a4a;
   padding: 8px 16px;
   position: absolute;
-  bottom: -76px;
+  bottom: -56px;
   left: 50%;
   transform: translateX(-50%);
 }
