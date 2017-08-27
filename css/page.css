@@ -144,6 +144,12 @@ p {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header__branding .copy .h1 {
+    font-size: 5em;
+  }
+}
+
 .header__branding .copy .h1 span {
   display: block;
 }
