@@ -524,6 +524,12 @@ p
                 font-size: 1.5em
                 font-weight: 700
 
+        .error
+            width: 100%
+            background: rgba(0,0,0,0.2)
+            padding: 16px
+            text-align: left
+
         .form
             @include flex(1)
             padding-left: 128px
@@ -544,7 +550,7 @@ p
             form
                 margin-top: 32px
 
-                input[type="text"]
+                input
                     padding: 16px
                     display: block
                     width: 100%
@@ -579,3 +585,36 @@ p
     background: #fff
     margin-left: 0
     margin-bottom: 32px
+
+.success
+    width: 90%
+    background: rgba(126,210,33,0.5)
+    border: 1px solid #A2E757
+    padding: 16px
+    text-align: center
+    opacity: 1
+    position: absolute
+    top: 16px
+    display: inline
+    -moz-animation: cssAnimation 2s ease-in-out 3s forwards
+    /* Firefox */
+    -webkit-animation: cssAnimation 2s ease-in-out 3s forwards
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 2s ease-in-out 3s forwards
+    /* Opera */
+    animation: cssAnimation 2s ease-in-out 3s forwards
+    z-index: 9
+    left: 5%
+    box-shadow: 8px 8px 16px rgba(0,0,0,0.10)
+    border-radius: 8px
+
+
+@keyframes cssAnimation
+    to 
+        opacity: 0
+        display: none
+
+@-webkit-keyframes cssAnimation
+    to
+        opacity: 0
+        display: none

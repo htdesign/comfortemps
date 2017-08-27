@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+
+require_once 'helpers/security.php';
+
+$errors = isset($_SESSION['errors']) ? $_SESSION['errors'] : [];
+$fields = isset($_SESSION['fields']) ? $_SESSION['fields'] : [];
+$sent = isset($_SESSION['sent']) ? $_SESSION['sent'] : [];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +22,11 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
 </head>
 <body>
+
+    <?php if(!empty($sent)): ?>
+    <div class="success"><?php echo $sent ?></div> 
+    <?php endif; ?>
+
     <div class="site">
         <header class="header">
             <div class="header__branding">
@@ -201,15 +218,31 @@
             </div>
             <div class="form">
                 <p>We love to hear from you. Flick us your details below and will reach out within the next 48 hours.</p>
-                <form action="details.php" method="post">
-                    <input type="text" placeholder="Name" name="name" required>
-                    <input type="text" placeholder="Email Address" name="email" required>
-                    <input type="text" placeholder="Phone / Mobile" name="phone" required>
+                <?php if(!empty($errors)): ?>
+                    <div class="error">
+                        <ul>
+                            <li><?php echo implode('</li><li>', $errors); ?></li>
+                        </ul>
+                    </div> 
+                <?php endif; ?>
+                
+                <form action="details.php" method="post" id="form">
+                    <input type="text" placeholder="Name" name="name" <?php echo isset($fields['name']) ? 'value="' . e($fields['name']) . '"' : '' ?>>
+                    <input type="email" placeholder="Email Address" name="email" <?php echo isset($fields['email']) ? 'value="' . e($fields['email']) . '"' : '' ?>>
+                    <input type="text" type="" placeholder="Phone / Mobile" name="phone" <?php echo isset($fields['phone']) ? 'value="' . e($fields['phone']) . '"' : '' ?>>
                     <button type="submit" name="submit" class="button">submit</button>
                 </form>
             </div>
         </div>
     </section>
-    <script src="https://use.fontawesome.com/33460ac6f5.js"></script>
 </body>
 </html>
+
+
+<?php
+
+unset($_SESSION['errors']);
+unset($_SESSION['fields']);
+unset($_SESSION['sent']);
+
+?>
