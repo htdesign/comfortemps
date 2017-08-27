@@ -26,7 +26,6 @@ if(isset($_POST['name'], $_POST['email'], $_POST['phone'])) {
 
         $m->isSMTP();
         $m->SMTPAuth = true;
-        // $m->SMTPDebug = 1;
         $m->Host = 'smtp.gmail.com';
         $m->Username = 'comfortemps@gmail.com';
         $m->Password = 'Ctemps4427';

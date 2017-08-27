@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Norwester";
   src: url("../webfonts/norwester.eot");
-  src: url("../webfonts/norwester.woff") format("woff"), url("../webfonts/norwester.ttf") format("truetype"), url("../webfonts/norwester.svg") format("svg");
+  src: url("../webfonts/norwester.eot") format("embedded-opentype"), url("../webfonts/norwester.woff") format("woff"), url("../webfonts/norwester.ttf") format("truetype"), url("../webfonts/norwester.svg") format("svg");
 }
 
 * {
@@ -30,7 +30,7 @@ h1, h2, h3, h4,
 }
 
 .h1 {
-  font-size: 6em;
+  font-size: 5em;
   line-height: 1.25em;
   letter-spacing: 4px;
 }
@@ -137,7 +137,7 @@ p {
 
 @media (max-width: 767px) {
   .header__branding .copy .h1 {
-    font-size: 4em;
+    font-size: 3em;
     position: relative;
     min-width: auto;
     top: 0;
@@ -146,7 +146,8 @@ p {
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .header__branding .copy .h1 {
-    font-size: 5em;
+    font-size: 4em;
+    top: 48px;
   }
 }
 
@@ -291,7 +292,7 @@ p {
   width: 50%;
   margin: auto;
   text-align: center;
-  margin-bottom: 64px;
+  margin-bottom: 80px;
 }
 
 @media (max-width: 767px) {
@@ -305,8 +306,11 @@ p {
   border-bottom: 1px solid #c9c9c9;
 }
 
-.panasonic h3 {
+.panasonic .copy {
   color: #969696;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 32px;
 }
 
 .packages {
@@ -381,6 +385,12 @@ p {
   }
 }
 
+.packages__copy .quick {
+  font-size: 2em;
+  text-align: center;
+  margin-top: 80px;
+}
+
 .packages .package-list {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
@@ -414,15 +424,6 @@ p {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  .packages .package-list {
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
-
 .packages .package-list .package {
   position: relative;
   background: #fff;
@@ -433,10 +434,10 @@ p {
   -moz-flex-basis: 45%;
   -ms-flex-basis: 45%;
   flex-basis: 45%;
-  -webkit-flex-basis: calc(50% - 1em);
-  -moz-flex-basis: calc(50% - 1em);
-  -ms-flex-basis: calc(50% - 1em);
-  flex-basis: calc(50% - 1em);
+  -webkit-flex-basis: calc(50% - 16px);
+  -moz-flex-basis: calc(50% - 16px);
+  -ms-flex-basis: calc(50% - 16px);
+  flex-basis: calc(50% - 16px);
 }
 
 .packages .package-list .package__name {
@@ -471,12 +472,58 @@ p {
   padding-top: 1em;
 }
 
+@media (max-width: 767px) {
+  .packages .package-list .package .specs {
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: space-between;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .packages .package-list .package .specs {
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: space-between;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+
 .packages .package-list .package .specs .spec {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+}
+
+@media (max-width: 767px) {
+  .packages .package-list .package .specs .spec {
+    -webkit-flex-basis: 40%;
+    -moz-flex-basis: 40%;
+    -ms-flex-basis: 40%;
+    flex-basis: 40%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .packages .package-list .package .specs .spec {
+    -webkit-flex-basis: 40%;
+    -moz-flex-basis: 40%;
+    -ms-flex-basis: 40%;
+    flex-basis: 40%;
+  }
 }
 
 .packages .package-list .package .specs .spec .value {
