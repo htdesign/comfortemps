@@ -127,6 +127,12 @@ p
                 position: absolute
                 top: 208px
                 left: -144px
+                z-index: 1
+
+            .button
+                text-align: left
+                z-index: 3
+                position: relative 
 
         .masthead 
             position: absolute
@@ -135,7 +141,7 @@ p
             right: 0
             left: 25%
             top: 0
-            z-index: 1
+            z-index: 0
 
             @include mobile()
                 display: none
@@ -553,6 +559,7 @@ p
                 line-height: 1
                 font-size: 1.5em
                 font-weight: 700
+                padding-left: 0
 
         .error
             width: 100%

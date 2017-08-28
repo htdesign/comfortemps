@@ -34,7 +34,8 @@ $sent = isset($_SESSION['sent']) ? $_SESSION['sent'] : [];
                 <div class="copy">
                     <h1 class="h1">Comfortable Temperature <span>All Year Round</span></h1>
                     <small class="subhead">Your Heat Pump Specialist!</small>
-                    <a href="#contact" class="button">Request for Quote Now</a>
+                    <!-- <a href="#contact" class="button">Request for Quote Now</a> -->
+                    <a href="#contact" class="button">Request for Free Quote And Consulation</a>
                 </div>
                 <div class="masthead">
                     <img src="images/header_img.png">
@@ -75,14 +76,14 @@ $sent = isset($_SESSION['sent']) ? $_SESSION['sent'] : [];
                     <img class="photo" src="images/unit_a.jpg" alt="Panasonic CS/CU E7PKR">
                     <h5 class="unit__name">Panasonic CS/CU E9PKR</h5>
                     <div class="specs">
-                            <div class="spec purifier">
-                                <p class="value">nanoe-G<span class="unit">Air Purifier</span></p>
-                            </div>
                             <div class="spec cooling">
                                 <p class="value">2.05kW<span class="unit">Cooling</span></p>
                             </div>
                             <div class="spec heating">
                                 <p class="value">2.70kW<span class="unit">Heating</span></p>
+                            </div>
+                            <div class="spec purifier">
+                                <p class="value">nanoe-G<span class="unit">Air Purifier</span></p>
                             </div>
                             <div class="spec energy">
                                 <p class="value">5/5<span class="unit">Energy Rating</span></p>
@@ -98,14 +99,14 @@ $sent = isset($_SESSION['sent']) ? $_SESSION['sent'] : [];
                     <img class="photo" src="images/unit_b.jpg" alt="Panasonic CS/CU E7PKR">
                     <h5 class="unit__name">Panasonic CS/CU E9PKR</h5>                    
                     <div class="specs">
-                        <div class="spec purifier">
-                            <p class="value">nanoe-G<span class="unit">Air Purifier</span></p>
-                        </div>
                         <div class="spec cooling">
                             <p class="value">2.05kW<span class="unit">Cooling</span></p>
                         </div>
                         <div class="spec heating">
                             <p class="value">2.70kW<span class="unit">Heating</span></p>
+                        </div>
+                        <div class="spec purifier">
+                            <p class="value">nanoe-G<span class="unit">Air Purifier</span></p>
                         </div>
                         <div class="spec energy">
                             <p class="value">5/5<span class="unit">Energy Rating</span></p>
@@ -121,14 +122,14 @@ $sent = isset($_SESSION['sent']) ? $_SESSION['sent'] : [];
                     <img class="photo" src="images/unit_b.jpg" alt="Panasonic CS/CU E7PKR">
                     <h5 class="unit__name">Panasonic CS/CU E12PKR</h5>
                     <div class="specs">
-                            <div class="spec purifier">
-                                <p class="value">nanoe-G<span class="unit">Air Purifier</span></p>
-                            </div>
                             <div class="spec cooling">
                                 <p class="value">3.50kW<span class="unit">Cooling</span></p>
                             </div>
                             <div class="spec heating">
                                 <p class="value">4.90kW<span class="unit">Heating</span></p>
+                            </div>
+                            <div class="spec purifier">
+                                <p class="value">nanoe-G<span class="unit">Air Purifier</span></p>
                             </div>
                             <div class="spec energy">
                                 <p class="value">3/5<span class="unit">Energy Rating</span></p>
@@ -144,14 +145,14 @@ $sent = isset($_SESSION['sent']) ? $_SESSION['sent'] : [];
                     <img class="photo" src="images/unit_b.jpg" alt="Panasonic CS/CU E7PKR">
                     <h5 class="unit__name">Panasonic CS/CU E18PKR</h5>                    
                     <div class="specs">
-                            <div class="spec purifier">
-                                <p class="value">nanoe-G<span class="unit">Air Purifier</span></p>
-                            </div>
                             <div class="spec cooling">
                                 <p class="value">5.0kW<span class="unit">Cooling</span></p>
                             </div>
                             <div class="spec heating">
                                 <p class="value">6.35kW<span class="unit">Heating</span></p>
+                            </div>
+                            <div class="spec purifier">
+                                <p class="value">nanoe-G<span class="unit">Air Purifier</span></p>
                             </div>
                             <div class="spec energy">
                                 <p class="value">2.5/5<span class="unit">Energy Rating</span></p>
@@ -171,15 +172,15 @@ $sent = isset($_SESSION['sent']) ? $_SESSION['sent'] : [];
             <div class="right">
                 <div class="service">
                     <h3 class="service__title installation">Installation</h3>
-                    <p>We pride in what we do. This is why we partner only with the brand that we can trust. Comfortemps expertise in installation of Panasonic Heat Pump and Air Conditioning System provides you piece of mind. Our After Sales Support ensures Quality Service of every installation we do for our customers. What’s more, Panasonic Heat Pump is rightfully designed for Kiwi Homes focusing on efficiency, air purification, and most importantly, value for your money – definitely, the preferable heating system for your home.</p>
+                    <p>We pride in what we do. This is why we partner only with the brand that we can trust. Comfortemps expertise in installation of Panasonic Heat Pump and Air Conditioning System provides you piece of mind. Our After Sales Support ensures Quality Service of every installation we do for our customers. What’s more, Panasonic Heat Pump is rightfully designed for Kiwi Homes focusing on efficiency, air purification, and most importantly, value for your money – definitely, the preferable heating system for your home. We can install different types or model heat pumps such as high wall models, floor consoles models, under ceiling models, cassettes models and ducted system.</p>
                 </div>
                 <div class="service">
                     <h3 class="service__title serv">Service</h3>
-                    <p>We pride in what we do. This is why we partner only with the brand that we can trust. Comfortemps expertise in installation of Panasonic Heat Pump and Air Conditioning System provides you piece of mind. Our After Sales Support ensures Quality Service of every installation we do for our customers. What’s more, Panasonic Heat Pump is rightfully designed for Kiwi Homes focusing on efficiency, air purification, and most importantly, value for your money – definitely, the preferable heating system for your home.</p>
+                    <p>Just like a car engine that needs regular tune-up, Comfortemps make sure your Heat Pump and Air Conditioning System is ready for the freezing winter or hot summer. Our expert service offers quick diagnosis and solution or repair for your system. Booking with us is easy as we understand the time of our working customers.</p>
                 </div>
                 <div class="service">
                     <h3 class="service__title maintenance">Maintenance</h3>
-                    <p>We pride in what we do. This is why we partner only with the brand that we can trust. Comfortemps expertise in installation of Panasonic Heat Pump and Air Conditioning System provides you piece of mind. Our After Sales Support ensures Quality Service of every installation we do for our customers. What’s more, Panasonic Heat Pump is rightfully designed for Kiwi Homes focusing on efficiency, air purification, and most importantly, value for your money – definitely, the preferable heating system for your home.</p>
+                    <p>Comfortemps values the life span of your Heat Pump and Air Conditioning System. We offer contractual service to both residential and commercial establishment in maintaining your Heat Pump and Air Conditioning System for a longer lasting and consistent performance of your product.</p>
                 </div>
             </div>
         </section>
@@ -189,7 +190,7 @@ $sent = isset($_SESSION['sent']) ? $_SESSION['sent'] : [];
             </div>
             <div class="title">
                 <h2>Ducted System</h2>
-                <a href="#contact" class="button">Request for Quote Now</strong></a>
+                <a href="#contact" class="button">Free Quote And Consulation</strong></a>
             </div>
         </section>
     </div>
