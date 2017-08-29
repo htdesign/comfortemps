@@ -74,7 +74,7 @@ $sent = isset($_SESSION['sent']) ? $_SESSION['sent'] : [];
                 <div class="package">
                     <h4 class="package__name">Perfect For Small Bedroom</h4>
                     <img class="photo" src="images/unit_a.jpg" alt="Panasonic CS/CU E7PKR">
-                    <h5 class="unit__name">Panasonic CS/CU E9PKR</h5>
+                    <h5 class="unit__name">Panasonic CS/CU E7PKR</h5>
                     <div class="specs">
                             <div class="spec cooling">
                                 <p class="value">2.05kW<span class="unit">Cooling</span></p>
