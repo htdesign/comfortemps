@@ -41,9 +41,6 @@ $sent = isset($_SESSION['sent']) ? $_SESSION['sent'] : [];
                     <img src="images/header_img.png">
                 </div>
             </div>
-            <!-- <div class="header__hero">
-                <a href="#" class="button">Request for Quote Now – <strong>Obligation FREE!</strong></a>
-            </div> -->
         </header>
         <section class="intro">
             <div class="intro__header">
@@ -73,7 +70,7 @@ $sent = isset($_SESSION['sent']) ? $_SESSION['sent'] : [];
             <div class="package-list">
                 <div class="package">
                     <h4 class="package__name">Perfect For Small Bedroom</h4>
-                    <img class="photo" src="images/unit_a.jpg" alt="Panasonic CS/CU E7PKR">
+                    <img class="photo" src="images/unit_b.jpg" alt="Panasonic CS/CU E7PKR">
                     <h5 class="unit__name">Panasonic CS/CU E7PKR</h5>
                     <div class="specs">
                             <div class="spec cooling">
@@ -118,7 +115,7 @@ $sent = isset($_SESSION['sent']) ? $_SESSION['sent'] : [];
                     <p class="price">Only $1,749</p>
                 </div>
                 <div class="package">
-                    <h4 class="package__name">Lounge Savings Package</h4>
+                    <h4 class="package__name">Perfect For Lounge</h4>
                     <img class="photo" src="images/unit_b.jpg" alt="Panasonic CS/CU E7PKR">
                     <h5 class="unit__name">Panasonic CS/CU E12PKR</h5>
                     <div class="specs">
@@ -141,7 +138,7 @@ $sent = isset($_SESSION['sent']) ? $_SESSION['sent'] : [];
                     <p class="price">Only $1,999</p>
                 </div>
                 <div class="package">
-                    <h4 class="package__name">Open Lounge Savings Package</h4>
+                    <h4 class="package__name">Perfect For Open Lounge</h4>
                     <img class="photo" src="images/unit_b.jpg" alt="Panasonic CS/CU E7PKR">
                     <h5 class="unit__name">Panasonic CS/CU E18PKR</h5>                    
                     <div class="specs">
