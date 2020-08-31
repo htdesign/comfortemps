@@ -1,15 +1,3 @@
-<?php
-
-session_start();
-
-require_once 'helpers/security.php';
-
-$errors = isset($_SESSION['errors']) ? $_SESSION['errors'] : [];
-$fields = isset($_SESSION['fields']) ? $_SESSION['fields'] : [];
-$sent = isset($_SESSION['sent']) ? $_SESSION['sent'] : [];
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,9 +12,7 @@ $sent = isset($_SESSION['sent']) ? $_SESSION['sent'] : [];
 </head>
 <body>
 
-    <?php if(!empty($sent)): ?>
-    <div class="success"><?php echo $sent ?></div> 
-    <?php endif; ?>
+
 
     <div class="site">
         <header class="header">
@@ -266,13 +252,7 @@ $sent = isset($_SESSION['sent']) ? $_SESSION['sent'] : [];
             </div>
             <div class="form">
                 <p>We love to hear from you. Flick us your details below and will reach out within the next 48 hours.</p>
-                <?php if(!empty($errors)): ?>
-                    <div class="error">
-                        <ul>
-                            <li><?php echo implode('</li><li>', $errors); ?></li>
-                        </ul>
-                    </div> 
-                <?php endif; ?>
+
                 
                 <form action="details.php" method="post" id="form">
                     <input type="text" placeholder="Name" name="name" <?php echo isset($fields['name']) ? 'value="' . e($fields['name']) . '"' : '' ?>>
@@ -287,10 +267,3 @@ $sent = isset($_SESSION['sent']) ? $_SESSION['sent'] : [];
 </html>
 
 
-<?php
-
-unset($_SESSION['errors']);
-unset($_SESSION['fields']);
-unset($_SESSION['sent']);
-
-?>
