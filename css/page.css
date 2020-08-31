@@ -137,6 +137,7 @@ p {
   position: absolute;
   top: 64px;
   z-index: 2;
+  text-shadow: 4px 4px 16px rgba(0,0,0,0.3);
 }
 
 @media (max-width: 767px) {
@@ -191,6 +192,7 @@ p {
   text-align: left;
   z-index: 3;
   position: relative;
+  text-shadow: 0px 0px 32px rgba(0,0,0,0.4);
 }
 
 .header__branding .masthead {
@@ -306,7 +308,7 @@ p {
   }
 }
 
-.panasonic {
+.dealer {
   width: 50%;
   margin: auto;
   text-align: center;
@@ -314,17 +316,17 @@ p {
 }
 
 @media (max-width: 767px) {
-  .panasonic {
+  .dealer {
     width: 80%;
   }
 }
 
-.panasonic img {
+.dealer img {
   width: 100%;
-  border-bottom: 1px solid #c9c9c9;
+  /*border-bottom: 1px solid #c9c9c9;*/
 }
 
-.panasonic .copy {
+.dealer .copy {
   color: #969696;
   text-transform: uppercase;
   font-size: 1.5em;
@@ -441,6 +443,7 @@ p {
 
 @media (max-width: 767px) {
   .packages .package-list {
+    display: block;
     -webkit-flex-direction: column;
     -moz-flex-direction: column;
     -ms-flex-direction: column;
@@ -453,6 +456,7 @@ p {
   position: relative;
   background: #fff;
   padding: 2em;
+  padding-bottom: 4em;
   margin-bottom: 10em;
   border: 1px solid #e3e3e3;
   -webkit-flex-basis: 45%;
@@ -463,6 +467,7 @@ p {
   -moz-flex-basis: calc(50% - 16px);
   -ms-flex-basis: calc(50% - 16px);
   flex-basis: calc(50% - 16px);
+  box-shadow: 0px 0px 32px rgba(0,0,0,0.2);
 }
 
 @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
@@ -471,6 +476,12 @@ p {
     -moz-flex-basis: 40%;
     -ms-flex-basis: 40%;
     flex-basis: 40%;
+  }
+}
+
+@media (max-width: 767px) {
+  .packages .package-list .package {
+    display: block;
   }
 }
 
@@ -508,6 +519,7 @@ p {
 
 @media (max-width: 767px) {
   .packages .package-list .package .specs {
+    display: block;
     -webkit-justify-content: space-between;
     -moz-justify-content: space-between;
     -ms-justify-content: space-between;
@@ -517,6 +529,13 @@ p {
     -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+  }
+  .packages .package-list .package .specs:before, .packages .package-list .package .specs:after {
+    content: "";
+    display: table;
+  }
+  .packages .package-list .package .specs:after {
+    clear: both;
   }
 }
 
@@ -544,6 +563,8 @@ p {
 
 @media (max-width: 767px) {
   .packages .package-list .package .specs .spec {
+    width: 50%;
+    float: left;
     -webkit-flex-basis: 40%;
     -moz-flex-basis: 40%;
     -ms-flex-basis: 40%;
@@ -596,15 +617,20 @@ p {
   display: block;
   text-align: center;
   text-transform: uppercase;
+  font-weight: bold;
   font-size: 1em;
   letter-spacing: 4px;
   color: #fff;
-  background: #4a4a4a;
-  padding: 8px 16px;
+  background: #25AAE1;
+  padding: 16px 16px;
   position: absolute;
-  bottom: -56px;
-  left: 50%;
-  transform: translateX(-50%);
+  /*bottom: -56px;*/
+  /*left: 50%;*/
+  /*transform: translateX(-50%);*/
+  width: 100%;
+  left: 0;
+  margin-bottom: 0;
+  bottom: 0;
 }
 
 .services {
@@ -615,7 +641,7 @@ p {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 767px) {
@@ -721,14 +747,13 @@ p {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  padding: 80px;
+  padding: 40px 80px;
   margin: auto;
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
   -ms-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: space-between;
-  margin-bottom: 20em;
   background: #f0f0f0;
 }
 
@@ -999,6 +1024,7 @@ p {
   letter-spacing: 2px;
   text-align: center;
   color: #fff;
+  background: #E64726;
   background-image: linear-gradient(89deg, #FF8A30 0%, #DB2A22 100%);
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1);
   padding: 18px 24px;
